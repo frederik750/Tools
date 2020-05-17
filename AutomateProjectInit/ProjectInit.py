@@ -1,6 +1,7 @@
 #Automate git init process while making directory
 import os
 import sys
+import datetime
 
 path = "/mnt/c/Users/frede/Documents/GitHub/"
 
@@ -10,7 +11,7 @@ def init():
         os.makedirs(path + directoryName)
     except FileExistsError:
         print("This folder already exits")
-    print("Directory {Directory} was created".format(Directory = directoryName))
+    print("Directory {Directory} was created at {path} {time}".format(Directory = directoryName, path = path, time = str(datetime.datetime.now())))
 
 
 if __name__ == "__main__":
