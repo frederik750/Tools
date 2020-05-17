@@ -10,7 +10,7 @@ def init():
         os.makedirs(path + directoryName)
     except FileExistsError:
         print("This folder already exits")
-    print("Directory {Directory} was created".format(Directory=str(sys.argv[1])))
+    print("Directory {Directory} was created".format(Directory = directoryName))
 
 
 if __name__ == "__main__":
