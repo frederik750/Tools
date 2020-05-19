@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+Credentials.py
 
 # C extensions
 *.so
@@ -122,5 +123,3 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-
-C:\Users\frede\Documents\GitHub\Tools\AutomateProjectMod/Credentials.py
