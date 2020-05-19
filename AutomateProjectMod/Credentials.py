@@ -1,1 +1,1 @@
-password = "testpass"
+token = "test123"
