@@ -11,7 +11,8 @@ def Remove():
     try:
         os.removedirs(path + directoryName)
         g = Github(token)
-        g.get_repo(directoryName).delete()
+        repo = g.get_repo("frederik750/" + directoryName)
+        repo.delete()
         print("Directory {Directory} at {path} was deleted {time}".format(Directory = directoryName, path = path, time = str(datetime.datetime.now())))
     except FileNotFoundError:
         print("This folder does not exits")

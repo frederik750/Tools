@@ -15,7 +15,7 @@ def init():
         os.makedirs(path + directoryName)
         g = Github(token)
         user = g.get_user()
-        repo = user.create_repo(directoryName, auto_init=True)
+        user.create_repo(directoryName, auto_init=True)
         Repo.clone_from(git_repo, path + directoryName)
         print("Directory {Directory} was created at {path} {time}".format(Directory = directoryName, path = path, time = str(datetime.datetime.now())))
     except FileExistsError:
