@@ -12,12 +12,11 @@ def init():
     directoryName = str(sys.argv[1])
     git_repo = "https://github.com/frederik750/" + directoryName + ".git"
     try:
-        os.makedirs(path + directoryName)
         g = Github(token)
         user = g.get_user()
         user.create_repo(directoryName, auto_init=True)
         Repo.clone_from(git_repo, path + directoryName)
-        print("Directory {Directory} was created at {path} {time}".format(Directory = directoryName, path = path, time = str(datetime.datetime.now())))
+        print("Repository {Directory} was created on Github at {time} and cloned to {path}".format(Directory = directoryName, path = path, time = str(datetime.datetime.now())))
     except FileExistsError:
         print("This folder already exits")
 
