@@ -123,3 +123,4 @@ dmypy.json
 # Pyre type checker
 .pyre/
 AutomateProjectMod/Credentials.py
+TODOList/TODO.txt
